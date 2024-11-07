@@ -3,9 +3,7 @@
     <h class="title">Pretraživanje svih knjiga</h>
     <p class="description">Pretražite i pronađite svoje najdraže knjige!</p>
 
-    <!-- Sekcija za unos pretrage i odabir kriterija -->
     <div class="search-container">
-      <!-- Input polje za unos pretraživanog pojma -->
       <q-input
         v-model="searchQuery"
         label="Unesite pojam za pretragu"
@@ -13,7 +11,6 @@
         clearable
       />
 
-      <!-- Checkboxovi za pretragu po naslovu i autoru -->
       <q-checkbox
         v-model="searchByTitle"
         label="Pretraži po naslovu"
@@ -26,7 +23,6 @@
         color="primary"
       />
 
-      <!-- Gumb za pokretanje pretrage -->
       <q-btn
         label="Traži"
         color="primary"
@@ -35,7 +31,6 @@
       />
     </div>
 
-    <!-- Tablica za prikaz rezultata pretrage -->
     <q-table
       v-if="filteredBooks.length > 0"
       :rows="filteredBooks"

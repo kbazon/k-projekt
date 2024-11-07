@@ -3,9 +3,7 @@
     <h class="title">Prijava Člana</h>
     <p class="description">Molim vas unesite svoje podatke za prijavu.</p>
 
-    <!-- Forma za prijavu -->
     <div class="login-form">
-      <!-- Input polje za korisničko ime -->
       <q-input
         v-model="loginData.korisnickoIme"
         label="Korisničko ime"
@@ -14,7 +12,6 @@
         required
       />
 
-      <!-- Input polje za lozinku -->
       <q-input
         v-model="loginData.lozinka"
         label="Lozinka"
@@ -24,7 +21,6 @@
         required
       />
 
-      <!-- Gumb za potvrdu prijave -->
       <q-btn
         label="Potvrdi"
         color="primary"
@@ -39,7 +35,6 @@
 export default {
   data() {
     return {
-      // Objekt koji sadrži podatke za prijavu
       loginData: {
         korisnickoIme: "",
         lozinka: "",
@@ -48,16 +43,13 @@ export default {
   },
   methods: {
     loginUser() {
-      // Provjera da li su popunjena polja korisničko ime i lozinka
       if (!this.loginData.korisnickoIme || !this.loginData.lozinka) {
         alert("Molimo unesite korisničko ime i lozinku.");
         return;
       }
 
-      // Logika za prijavu korisnika
       console.log("Pokušaj prijave korisnika:", this.loginData);
 
-      // Resetiranje forme nakon prijave
       this.loginData = {
         korisnickoIme: "",
         lozinka: "",

@@ -3,7 +3,6 @@
     <h class="title">Registriraj se!</h>
     <p class="description">Molim vas unesite svoje podatke za registraciju.</p>
 
-    <!-- Forma za registraciju -->
     <div class="registration-form">
       <q-input v-model="user.ime" label="Ime" filled clearable required />
 
@@ -41,7 +40,6 @@
         required
       />
 
-      <!-- Gumb za potvrdu registracije -->
       <q-btn
         label="Potvrdi"
         color="primary"
@@ -56,7 +54,6 @@
 export default {
   data() {
     return {
-      // Objekt koji predstavlja podatke korisnika
       user: {
         ime: "",
         prezime: "",
@@ -68,7 +65,6 @@ export default {
   },
   methods: {
     registerUser() {
-      // Provjera je li forma popunjena
       if (
         !this.user.ime ||
         !this.user.prezime ||
@@ -80,10 +76,8 @@ export default {
         return;
       }
 
-      // Logika za obradu registracije korisnika
       console.log("Registracija korisnika:", this.user);
 
-      // Resetiranje forme nakon registracije
       this.user = {
         ime: "",
         prezime: "",
