@@ -1,5 +1,7 @@
 <template>
   <q-page padding>
+    <h class="title">Pronađite nas!</h>
+    <p class="description">Lokacija knjižnice.</p>
     <div id="map" style="height: 500px"></div>
   </q-page>
 </template>
@@ -36,5 +38,17 @@ export default {
 #map {
   width: 100%;
   height: 500px;
+}
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-top: 40px;
+  font-weight: bold;
+  padding: 20px;
+}
+.description {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  padding: 20px;
 }
 </style>

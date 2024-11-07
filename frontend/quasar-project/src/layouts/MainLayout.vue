@@ -19,7 +19,7 @@
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-        <q-item-label header> Essential Links </q-item-label>
+        <q-item-label header> Meni </q-item-label>
 
         <EssentialLink
           v-for="link in linksList"
@@ -47,43 +47,43 @@ const linksList = [
   {
     title: "Naslovnica",
     caption: "Početna",
-    icon: "Home",
+    icon: "home",
     link: "#/",
   },
   {
     title: "Popis svih knjiga",
     caption: "popis svih knjiga",
-    icon: "List",
+    icon: "list",
     link: "#/popis_knjiga",
   },
   {
     title: "Pretraživanje",
     caption: "pretraživanje knjiga",
-    icon: "Search",
+    icon: "search",
     link: "#/pretrazivanje",
   },
   {
     title: "O nama",
     caption: "o nama",
-    icon: "Group",
+    icon: "group",
     link: "#/o_nama",
   },
   {
     title: "Lokacija",
     caption: "lokacija",
-    icon: "Location On",
+    icon: "location_on",
     link: "#/lokacija",
   },
   {
     title: "Login",
     caption: "Prijava",
-    icon: "Login",
+    icon: "login",
     link: "#/login",
   },
   {
     title: "Registracija",
     caption: "Registriraj se",
-    icon: "How To Reg",
+    icon: "how_to_reg",
     link: "#/registracija",
   },
 ];
