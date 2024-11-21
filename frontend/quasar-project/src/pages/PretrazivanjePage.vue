@@ -14,18 +14,18 @@
       <q-checkbox
         v-model="searchByTitle"
         label="Pretraži po naslovu"
-        color="primary"
+        color="blue"
       />
 
       <q-checkbox
         v-model="searchByAuthor"
         label="Pretraži po autoru"
-        color="primary"
+        color="blue"
       />
 
       <q-btn
         label="Traži"
-        color="primary"
+        color="black"
         @click="searchBooks"
         class="search-button"
       />
