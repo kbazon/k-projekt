@@ -18,7 +18,7 @@
     </q-header>
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
-      <q-list>
+      <q-list class="stil">
         <q-item-label header> Meni </q-item-label>
 
         <EssentialLink
@@ -94,3 +94,9 @@ function toggleLeftDrawer() {
   leftDrawerOpen.value = !leftDrawerOpen.value;
 }
 </script>
+
+<style>
+.text-h4 {
+  font-weight: bold;
+}
+</style>
