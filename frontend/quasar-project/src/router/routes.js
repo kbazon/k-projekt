@@ -13,6 +13,10 @@ const routes = [
         component: () => import("pages/PopisKnjigaBaza.vue"),
       },
       {
+        path: "/rezervacija",
+        component: () => import("pages/RezervacijaPage.vue"),
+      },
+      {
         path: "/o_nama",
         component: () => import("pages/OnamaPage.vue"),
       },

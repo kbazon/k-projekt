@@ -18,10 +18,11 @@
     </q-header>
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
-      <q-list class="stil">
-        <q-item-label header> Meni </q-item-label>
+      <q-list>
+        <q-item-label header class="stil"> Meni </q-item-label>
 
         <EssentialLink
+          class="meni"
           v-for="link in linksList"
           :key="link.title"
           v-bind="link"
@@ -52,31 +53,37 @@ const linksList = [
   },
   {
     title: "Popis svih knjiga",
-    caption: "popis svih knjiga",
+    caption: "Popis svih knjiga",
     icon: "list",
     link: "#/popis_knjiga",
   },
   {
     title: "Popis knjiga baza",
-    caption: "baza knjiga",
-    icon: "list",
+    caption: "Baza knjiga",
+    icon: "storage",
     link: "#/baza_knjiga",
   },
   {
+    title: "Rezervacije",
+    caption: "Rezervacije knjiga",
+    icon: "book_online",
+    link: "#/rezervacija",
+  },
+  {
     title: "Pretraživanje",
-    caption: "pretraživanje knjiga",
+    caption: "Pretraživanje knjiga",
     icon: "search",
     link: "#/pretrazivanje",
   },
   {
     title: "O nama",
-    caption: "o nama",
+    caption: "O nama",
     icon: "group",
     link: "#/o_nama",
   },
   {
     title: "Lokacija",
-    caption: "lokacija",
+    caption: "Naša lokacija",
     icon: "location_on",
     link: "#/lokacija",
   },
@@ -103,6 +110,14 @@ function toggleLeftDrawer() {
 
 <style>
 .text-h4 {
+  font-weight: bold;
+}
+.meni {
+  margin-left: 15px;
+}
+.stil {
+  margin-left: 20px;
+  font-size: 15px;
   font-weight: bold;
 }
 </style>

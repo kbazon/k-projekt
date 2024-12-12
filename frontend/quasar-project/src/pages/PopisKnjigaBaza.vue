@@ -1,18 +1,15 @@
 <template>
   <q-page padding>
+    <h1>Popis knjiga</h1>
+
     <div class="q-pa-md">
       <q-table
-        class="baza"
         separator="horizontal"
-        title="Popis knjiga"
-        title-class="text-h4 text-bold text-black-9"
         :rows="books"
         :columns="columns"
         row-key="id"
         table-class="text-black"
-        table-style="border: 3px solid black;"
-        table-header-style="height: 65px"
-        table-header-class="bg-red-2"
+        table-style="border: 1px solid black;"
         bordered
         flat
         square
@@ -55,16 +52,16 @@ import { ref } from "vue";
 import axios from "axios";
 
 const style1 = {
-  fontSize: "18px",
+  fontSize: "15px",
 };
 const style2 = {
-  fontSize: "24px",
+  fontSize: "20px",
 };
 
 const columns = [
   {
     name: "id",
-    label: "id",
+    label: "ID",
     field: "id",
     align: "left",
     sortable: true,
@@ -73,7 +70,7 @@ const columns = [
   },
   {
     name: "naslov",
-    label: "naslov",
+    label: "Naslov",
     field: "naslov",
     align: "left",
     sortable: true,
@@ -82,7 +79,7 @@ const columns = [
   },
   {
     name: "autor",
-    label: "autor",
+    label: "Autor",
     field: "autor",
     align: "left",
     style: style1,
@@ -90,7 +87,7 @@ const columns = [
   },
   {
     name: "opis",
-    label: "opis",
+    label: "Opis",
     field: "opis",
     align: "left",
     style: style1,
@@ -98,7 +95,7 @@ const columns = [
   },
   {
     name: "slika",
-    label: "slika",
+    label: "Slika",
     field: "slika",
     align: "center",
     style: style1,
@@ -106,7 +103,7 @@ const columns = [
   },
   {
     name: "stanje",
-    label: "stanje",
+    label: "Stanje",
     field: "stanje",
     align: "center",
     style: style1,
@@ -145,3 +142,13 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+h1 {
+  margin-left: 20px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 30px;
+  font-weight: 500;
+}
+</style>
