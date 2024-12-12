@@ -23,7 +23,6 @@ const connection = mysql.createConnection({
 connection.connect(function (err) {
   if (err) {
     console.error("Greška prilikom spajanja na bazu:", err);
-    process.exit(1); // Prekini aplikaciju ako CONNECTION ne uspije
   }
   console.log("Connected to the database!");
 });
