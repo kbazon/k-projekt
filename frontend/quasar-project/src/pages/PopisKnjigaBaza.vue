@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <h1>Popis knjiga</h1>
+    <h1>Popis knjiga iz baze</h1>
 
     <div class="q-pa-md">
       <q-table

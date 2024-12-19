@@ -5,7 +5,7 @@ const routes = [
     children: [
       { path: "/", component: () => import("pages/IndexPage.vue") },
       {
-        path: "/popis_Knjiga",
+        path: "/popis_knjiga",
         component: () => import("pages/PopisKnjigaPage.vue"),
       },
       {
@@ -35,6 +35,34 @@ const routes = [
       {
         path: "/registracija",
         component: () => import("pages/RegistracijaPage.vue"),
+      },
+    ],
+  },
+
+  {
+    path: "/admin",
+    component: () => import("layouts/AdminLayout.vue"),
+    children: [
+      { path: "/", component: () => import("pages/AdminPage.vue") },
+      {
+        path: "/admin/popis_knjiga",
+        component: () => import("pages/PopisKnjigaPage.vue"),
+      },
+      {
+        path: "/admin/pretrazivanje",
+        component: () => import("pages/PretrazivanjePage.vue"),
+      },
+      {
+        path: "/admin/popis_korisnika",
+        component: () => import("pages/PopisKorisnika.vue"),
+      },
+      {
+        path: "/admin/unos_knjiga",
+        component: () => import("pages/UnosKnjiga.vue"),
+      },
+      {
+        path: "/admin/logout",
+        component: () => import("pages/LogoutPage.vue"),
       },
     ],
   },

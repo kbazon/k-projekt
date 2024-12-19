@@ -29,6 +29,21 @@ connection.connect(function (err) {
 
 app.use(cors());
 
+// API: Unos knjige
+app.post("/api/unos_knjige", (req, res) => {
+  const data = req.body;
+  knjiga = [[data.naslov, data.autor, data.opis, data.slika, data.stanje]];
+  connection.query(
+    "INSERT INTO knjiga (naslov, autor, opis, slika, stanje) VALUES ?",
+    [knjiga],
+    (error, results) => {
+      if (error) throw error;
+      res.send(results);
+    }
+  );
+});
+
+// Prikaz rezerviranih knjiga
 app.get("/api/rezervirane_knjige", (req, res) => {
   connection.query(
     `SELECT 
